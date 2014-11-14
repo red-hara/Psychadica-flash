@@ -1,4 +1,4 @@
-package  
+package arch
 {
 	/**
 	 * ...
@@ -14,14 +14,15 @@ package
 		{
 			super(Parent);
 			target = Target;
+			ignore = new Vector.<Snark>();
 		}
 		
 		public function apply(Target:Snark):Boolean {
 			var hit:Boolean = false;
-			for( var subsubTarget:Snark in Target.members ) {
-				if( subsubTarget instanceof Snark ) {
-					if( !ignore.contains((Snark)subsubTarget)) {
-						hit = apply((Snark) subsubTarget);
+			for each( var subsubTarget:Snark in Target.members ) {
+				if( subsubTarget is Snark ) {
+					if( ignore.indexOf(subsubTarget ) > -1 ) {
+						hit = apply(subsubTarget);
 					}
 				}
 				if( hit ) {
@@ -29,9 +30,9 @@ package
 				}
 			}
 			
-			if( Target instanceof Creature) {
-				if( inZone((Creature)Target)) {
-					((Creature)Target).hurt(this);
+			if( Target is Creature) {
+				if( inZone(Target as Creature)) {
+					(Target as Creature).hurt(this);
 				}
 			}
 			

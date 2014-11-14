@@ -1,4 +1,4 @@
-package  
+package arch
 {
 	import org.flixel.FlxSprite;
 	/**
@@ -19,7 +19,7 @@ package
 			super.create()
 		}
 		
-		public function hurt(Damager:DamageZone) {
+		public function hurt(Damager:DamageZone):void {
 			Damager.deliverHit(this);
 		}
 	}

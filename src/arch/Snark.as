@@ -1,4 +1,4 @@
-package  
+package arch
 {
 	import org.flixel.FlxState;
 	/**
@@ -11,6 +11,7 @@ package
 		
 		public function Snark(Parent:Snark) 
 		{
+			super();
 			parent = Parent;
 		}
 		

@@ -15,6 +15,7 @@
 		public function Main():void 
 		{
 			super(Global._GAME_SIZE.x, Global._GAME_SIZE.y, FullState, 4);
+			
 		}
 	}
 	
