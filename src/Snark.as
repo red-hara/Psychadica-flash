@@ -22,6 +22,10 @@ package
 			}
 		}
 		
+		public function create():void {
+			
+		}
+		
 	}
 
 }
