@@ -1,11 +1,11 @@
 package  
 {
-	import org.flixel.FlxGroup;
+	import org.flixel.FlxState;
 	/**
 	 * ...
 	 * @author red__hara
 	 */
-	public class Snark extends FlxGroup
+	public class Snark extends FlxState
 	{
 		public var parent:Snark = null;
 		
@@ -21,11 +21,6 @@ package
 				return parent.getRoot();
 			}
 		}
-		
-		public function create():void {
-			
-		}
-		
 	}
 
 }

@@ -5,12 +5,12 @@ package arch
 	 * ...
 	 * @author red__hara
 	 */
-	public class WorldState extends FlxState
+	public class WorldState extends Snark
 	{
 		
-		public function WorldState() 
+		public function WorldState(Parent:Snark) 
 		{
-			
+			super(Parent);
 		}
 		
 	}
