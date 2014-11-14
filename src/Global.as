@@ -8,7 +8,7 @@ package
 	 
 	public class Global
 	{
-		public static const _GAME_SIZE:FlxPoint = new FlxPoint(640 / 4, 420 / 4);
+		public static const _GAME_SIZE:FlxPoint = new FlxPoint(640 / 4, 480 / 4);
 		
 		public static const _PROPORTION:Number = 8;
 		
