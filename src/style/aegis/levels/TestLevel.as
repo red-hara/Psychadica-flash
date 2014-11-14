@@ -1,6 +1,8 @@
 package style.aegis.levels 
 {
 	import arch.Snark;
+	import org.flixel.FlxG;
+	import style.aegis.Aegis;
 	import style.aegis.Platformer;
 	import style.aegis.PlatformerCreature;
 	/**
@@ -13,7 +15,8 @@ package style.aegis.levels
 		public function TestLevel( Parent:Snark ) 
 		{
 			super(Parent);
-			add(new PlatformerCreature(this) );
+			FlxG.bgColor = 0xff808080;
+			add(new Aegis(this) );
 		}
 		
 	}
