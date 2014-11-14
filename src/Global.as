@@ -12,10 +12,10 @@ package
 		
 		public static const _PROPORTION:Number = 8;
 		
-		public static KEY_LEFT:String = "A";
-		public static KEY_RIGHT:String = "D";
-		public static KEY_UP:String = "W";
-		public static KEY_DOWN:String = "S";
+		static public var KEY_LEFT:String = "A";
+		static public var KEY_RIGHT:String = "D";
+		static public var KEY_UP:String = "W";
+		static public var KEY_DOWN:String = "S";
 	}
 
 }
