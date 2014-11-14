@@ -1,27 +1,21 @@
 ﻿package 
 {
-	import flash.display.Sprite;
-	import flash.events.Event;
+	import arch.FullState;
+	import org.flixel.FlxGame;
+	
+	[ SWF( width = "640", height = "480", backgroundColor = "#000000" ) ]
 	
 	/**
 	 * ...
 	 * @author red__hara
 	 */
-	public class Main extends Sprite 
+	public class Main extends FlxGame
 	{
 		
 		public function Main():void 
 		{
-			if (stage) init();
-			else addEventListener(Event.ADDED_TO_STAGE, init);
+			super(Global._GAME_SIZE.x, Global._GAME_SIZE.y, FullState, 4);
 		}
-		
-		private function init(e:Event = null):void 
-		{
-			removeEventListener(Event.ADDED_TO_STAGE, init);
-			// entry point
-		}
-		
 	}
 	
 }
