@@ -4,6 +4,7 @@ package style.aegis
 	import arch.Snark;
 	import org.flixel.FlxBasic;
 	import org.flixel.FlxG;
+	import org.flixel.FlxGroup;
 	/**
 	 * ...
 	 * @author red__hara
@@ -12,7 +13,7 @@ package style.aegis
 	{
 		public var runVelocity:Number;
 		public var jumpVelocity:Number;
-		public var collideTargets:Vector.<FlxBasic> = new Vector.<FlxBasic>;
+		public var collideTargets:FlxGroup = new FlxGroup();
 		
 		public function PlatformerCreature(Parent:Snark) 
 		{
@@ -21,9 +22,7 @@ package style.aegis
 		
 		override public function update():void {
 			super.update();
-			for each( var basic:FlxBasic in collideTargets ) {
-				FlxG.collide(basic, this);
-			}
+			FlxG.collide(this, collideTargets);
 		}
 		
 	}
