@@ -10,6 +10,8 @@ package style.aegis
 	public class Aegis extends PlatformerCreature {
 		public var aegisBody:FlxSprite;
 		
+		public var punchDamageZone:PunchDamageZone;
+		
 		[Embed(source = './data/Aegis.png')]
 		public var aegisBodyImg:Class;
 		
@@ -27,6 +29,11 @@ package style.aegis
 			aegisBody.facing = FlxObject.LEFT;
 			aegisBody.velocity.x = runVelocity;
 			add(aegisBody);
+		}
+		
+		override public function create():void {
+			super.create();
+			aegisBody.y = 12;
 		}
 	}
 }

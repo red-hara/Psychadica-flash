@@ -1,5 +1,6 @@
 package arch
 {
+	import org.flixel.FlxBasic;
 	import org.flixel.FlxState;
 	/**
 	 * ...
@@ -20,6 +21,14 @@ package arch
 				return this;
 			} else {
 				return parent.getRoot();
+			}
+		}
+		
+		override public function create():void {
+			for each( var basic:FlxBasic in members ) {
+				if ( basic is Snark ) {
+					(basic as Snark).create();
+				}
 			}
 		}
 	}

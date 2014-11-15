@@ -1,5 +1,6 @@
 package arch 
 {
+	import org.flixel.FlxBasic;
 	import org.flixel.FlxState;
 	import style.aegis.levels.TestLevel;
 	/**
@@ -12,11 +13,16 @@ package arch
 		public function FullState()
 		{
 			super();
+			add( new TestLevel(null) );
 		}
 		
 		override public function create():void {
 			super.create();
-			add( new TestLevel(null) );
+			for each( var basic:FlxBasic in members ) {
+				if ( basic is Snark ) {
+					( basic as Snark ).create();
+				}
+			}
 		}
 		
 	}

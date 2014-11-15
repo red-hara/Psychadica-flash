@@ -19,6 +19,11 @@ package style.aegis.levels
 			add(new Aegis(this) );
 		}
 		
+		override public function create():void {
+			super.create();
+			FlxG.bgColor = 0xff80c0c0;
+		}
+		
 	}
 
 }
