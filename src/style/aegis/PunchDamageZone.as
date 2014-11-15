@@ -14,6 +14,7 @@ package style.aegis
 		
 		public var applyZone:FlxObject;
 		public var offset:FlxPoint = new FlxPoint();
+		public var force:FlxPoint = new FlxPoint();
 		
 		public function PunchDamageZone( Parent:Snark, Target:Snark ) {
 			super(Parent, Target);
@@ -38,6 +39,22 @@ package style.aegis
 					applyZone.x = (parent as PlatformerCreature).sprite.x - applyZone.width - offset.x;
 				} else {
 					applyZone.x = (parent as PlatformerCreature).sprite.x + (parent as PlatformerCreature).sprite.width + offset.x;
+				}
+			}
+		}
+				
+		override public function deliverHit( Target:Creature ):void {
+			if ( parent is PlatformerCreature ) {
+				if ( (parent as PlatformerCreature).sprite.facing == FlxObject.LEFT ) {
+					if ( -Target.sprite.velocity.x < force.x ) {
+						Target.sprite.velocity.x = -force.x;
+						Target.sprite.velocity.y = -force.y;
+					}
+				} else {
+					if ( -Target.sprite.velocity.x < force.x ) {
+						Target.sprite.velocity.x = force.x;
+						Target.sprite.velocity.y = -force.y;
+					}
 				}
 			}
 		}
