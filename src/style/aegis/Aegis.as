@@ -21,6 +21,7 @@ package style.aegis
 			super(Parent);
 			
 			runVelocity = 80;
+			jumpVelocity = 64;
 			
 			aegisBody = new FlxSprite();
 			aegisBody.loadGraphic(aegisBodyImg, true, false, 48, 48 );
@@ -61,6 +62,10 @@ package style.aegis
 				aegisBody.play("stay right");
 			} else {
 				aegisBody.play("stay left");
+			}
+			
+			if ( aegisBody.isTouching(FlxObject.FLOOR) && FlxG.keys.justPressed(Global.KEY_UP) ) {
+				aegisBody.velocity.y = -jumpVelocity;
 			}
 		}
 	}
