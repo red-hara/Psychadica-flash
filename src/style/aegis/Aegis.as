@@ -12,6 +12,8 @@ package style.aegis
 	 */
 	public class Aegis extends PlatformerCreature {
 		public var aegisBody:FlxSprite;
+		public var rightHand:FlxSprite;
+		public var leftHand:FlxSprite;
 		public var punchDamageZone:PunchDamageZone;
 		[Embed(source = './data/Aegis.png')]
 		public var aegisBodyImg:Class;
