@@ -12,8 +12,9 @@ package style.aegis
 	 */
 	public class Aegis extends PlatformerCreature {
 		public var aegisBody:FlxSprite;
-		public var rightHand:FlxSprite;
-		public var leftHand:FlxSprite;
+		public var frontHand:FlxSprite;
+		public var backHand:FlxSprite;
+		public var head:FlxSprite;
 		public var punchDamageZone:PunchDamageZone;
 		[Embed(source = './data/Aegis.png')]
 		public var aegisBodyImg:Class;
@@ -35,6 +36,7 @@ package style.aegis
 			aegisBody.facing = FlxObject.RIGHT;
 			aegisBody.maxVelocity.x = runVelocity;
 			aegisBody.drag.x = runVelocity * 4;
+			
 			
 			var root:Snark = getRoot();
 			if ( root is Platformer ) {
