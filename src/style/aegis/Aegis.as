@@ -28,8 +28,8 @@ package style.aegis
 			
 			aegisBody = new FlxSprite();
 			aegisBody.loadGraphic(aegisBodyImg, true, false, 48, 48 );
-			aegisBody.addAnimation("run right", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], runVelocity/12*2);
-			aegisBody.addAnimation("run left", [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23], runVelocity/12*2);
+			aegisBody.addAnimation("run right", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], runVelocity/8);
+			aegisBody.addAnimation("run left", [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23], runVelocity/8);
 			aegisBody.addAnimation("stay right", [24]);
 			aegisBody.addAnimation("stay left", [25]);
 			aegisBody.play("stay right");
